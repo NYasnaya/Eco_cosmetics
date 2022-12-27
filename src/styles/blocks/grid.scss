@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 20px;
+
+  &--desktop-header {
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      display: block;
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 0 20px;
+    }
+  }
+
+  &__item {
+    @for $start from 1 through 12 {
+      @for $end from $start through 12 {
+        &--desktop-#{$start}-#{$end} {
+          @include onDesktop {
+            grid-column: #{$start} / #{$end + 1};
+          }
+        }
+      }
+    }
+  }
+}

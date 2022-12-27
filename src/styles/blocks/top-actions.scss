@@ -1,0 +1,67 @@
+.top-actions {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-desktop {
+    display: none;
+  }
+
+  @include onTablet {
+    height: 78px;
+  }
+
+  @include onDesktop {
+    display: none;
+
+    &-desktop {
+      margin: 40px 0 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__logo {
+        width: 270px;
+        height: 50px;
+      }
+
+      &__menu {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+        gap: 40px;
+
+        &-item {
+          display: inline-block;
+          margin-right: 40px;
+        }
+
+        &-link {
+          font-family: inherit;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 150%;
+          color: $acsentColor;
+
+          text-transform: capitalize;
+          text-decoration: none;
+        }
+
+        &__shop {
+          // display: block;
+          // width: 20px;
+          // height: 24px;
+          background-image: url(../images/icons/shop.svg);
+
+          transition: transform 1.3s;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+  }
+}

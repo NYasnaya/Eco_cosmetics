@@ -1,0 +1,61 @@
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &--menu {
+    background-image: url(../images/icons/Menu.svg);
+
+    transition: transform 1.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &--close {
+    background-image: url(../images/icons/close.svg);
+
+    transition: transform 1.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &--logo-icon {
+    background-image: url(../images/icons/Logo-icon.svg);
+
+    transition: transform 1.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &--shop {
+    background-image: url(../images/icons/shop.svg);
+
+    transition: transform 1.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}
