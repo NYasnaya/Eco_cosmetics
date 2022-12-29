@@ -1,10 +1,17 @@
 .grid {
-  display: grid;
+  @include onTablet {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 30px;
+  }
 
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 0 20px;
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+  }
 
-  &--desktop-header {
+  &--mobile-header {
     display: flex;
     flex-direction: column;
 
@@ -18,6 +25,32 @@
       grid-gap: 0 20px;
     }
   }
+
+  // &--mobile-footer {
+  //   @include onTablet {
+  //     display: grid;
+  //     grid-template-columns: repeat(6, 1fr);
+  //     column-gap: 30px;
+  //     }
+
+  //   @include onDesktop {
+  //     display: grid;
+  //     grid-template-columns: repeat(12, 1fr);
+  //     grid-gap: 0 20px;
+  //   }
+  // }
+
+  // &__item {
+  //   @for $start from 1 through 6 {
+  //     @for $end from $start through 6 {
+  //       &--tablet-#{$start}-#{$end} {
+  //         @include onTablet {
+  //           grid-column: #{$start} / #{$end + 1};
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   &__item {
     @for $start from 1 through 12 {

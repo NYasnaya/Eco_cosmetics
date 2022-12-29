@@ -1,0 +1,194 @@
+.footer {
+  width: 100%;
+  padding: 30px 0 40px;
+  background-color: $footerColor;
+
+  @include onTablet {
+    padding: 30px 0;
+  }
+
+  @include onDesktop {
+    padding: 60px 0 62px;
+  }
+
+  &__content {
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 30px;
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 0 20px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    list-style: none;
+
+    @include onTablet {
+      padding: 0;
+      grid-column: 1 / 3;
+      order: -1;
+    }
+
+    @include onDesktop {
+      display: flex;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &--last {
+      margin-bottom: 20px;
+    }
+
+    @include onTablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    padding: 0;
+    font-weight: bold; /* 500*/
+    font-size: 18px;
+    line-height: 130%;
+    color: $footerTextColor;
+    border-bottom: 1px solid transparent;
+
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      border-color: $footerTextColor;
+    }
+
+    @include onTablet {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    @include onDesktop {
+      font-size: 18px;
+    }
+  }
+
+  &__social-media {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+
+    @include onTablet {
+      grid-column: 1 / 3;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / 13;
+      order: 1;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      grid-column: 4 / 7;
+      order: -1;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / 13;
+    }
+
+    &-info {
+      margin-bottom: 10px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+      color: $footerTextColor;
+
+      &--last {
+        margin-bottom: 40px;
+      }
+
+      @include onTablet {
+        &--last {
+          margin-bottom: 0;
+        }
+      }
+
+      @include onDesktop {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 150%;
+
+        &--last {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &-link {
+      margin-bottom: 10px;
+      display: block;
+      width: max-content;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $footerTextColor;
+      border-bottom: 1px solid transparent;
+
+      text-decoration: none;
+
+      &:hover {
+        border-color: $footerTextColor;
+      }
+
+      @include onDesktop {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  &__copyright {
+    font-weight: bold; /* 600*/
+    font-size: 14px;
+    line-height: 130%;
+    color: $footerTextColor;
+
+    text-align: center;
+
+    @include onTablet {
+      padding-bottom: 30px;
+      text-align: left;
+      grid-column: 1 / 3;
+
+      font-weight: 400;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 5;
+      padding-bottom: 62px;
+      text-align: left;
+
+      font-weight: bold; /* 500*/
+      font-size: 18px;
+      line-height: 150%;
+      text-transform: capitalize;
+
+      &::before {
+        content: "Copyright";
+      }
+    }
+  }
+}

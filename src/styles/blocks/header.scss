@@ -104,7 +104,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 130%;
-    letter-spacing: 0.15em;
+    letter-spacing: 15%;
     color: $buttonTextColor;
     text-decoration: none;
     text-transform: uppercase;
@@ -112,9 +112,9 @@
     background-color: $mainColor;
     border: 1px solid transparent;
 
-    // @include onTablet {
-    //   margin-bottom: 150px;
-    // }
+    @include onTablet {
+      margin-bottom: 150px;
+    }
 
     @include onDesktop {
       margin-bottom: 0;

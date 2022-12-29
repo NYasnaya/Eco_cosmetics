@@ -6,7 +6,7 @@
   &--menu {
     background-image: url(../images/icons/Menu.svg);
 
-    transition: transform 1.3s;
+    transition: transform 0.3s;
 
     &:hover {
       transform: scale(1.5);
@@ -20,7 +20,7 @@
   &--close {
     background-image: url(../images/icons/close.svg);
 
-    transition: transform 1.3s;
+    transition: transform 0.3s;
 
     &:hover {
       transform: scale(1.5);
@@ -34,7 +34,7 @@
   &--logo-icon {
     background-image: url(../images/icons/Logo-icon.svg);
 
-    transition: transform 1.3s;
+    transition: transform 0.3s;
 
     &:hover {
       transform: scale(1.5);
@@ -48,7 +48,7 @@
   &--shop {
     background-image: url(../images/icons/shop.svg);
 
-    transition: transform 1.3s;
+    transition: transform 0.3s;
 
     &:hover {
       transform: scale(1.5);
@@ -56,6 +56,27 @@
 
     @include onDesktop {
       display: none;
+    }
+  }
+
+  &--facebook {
+    // margin-right: 20px;
+    background-image: url(../images/icons/facebook.svg);
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  &--instagram {
+    background-image: url(../images/icons/Instagram.svg);
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
     }
   }
 }
