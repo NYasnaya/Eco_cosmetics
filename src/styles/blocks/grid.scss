@@ -26,6 +26,18 @@
     }
   }
 
+  &--shop {
+
+    @include onTablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include onDesktop {
+      display: grid;
+    }
+  }
+
   // &--mobile-footer {
   //   @include onTablet {
   //     display: grid;

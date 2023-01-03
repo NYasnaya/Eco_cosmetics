@@ -80,45 +80,4 @@
       text-align: start;
     }
   }
-
-  &-wrap {
-    @include onTablet {
-      display: flex;
-      justify-content: center;
-    }
-
-    @include onDesktop {
-      justify-content: start;
-    }
-  }
-
-  &__button {
-    box-sizing: border-box;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 130%;
-    letter-spacing: 15%;
-    color: $buttonTextColor;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    background-color: $mainColor;
-    border: 1px solid transparent;
-
-    @include onTablet {
-      width: 280px;
-    }
-
-    // @include onDesktop {
-    //   margin-bottom: 0;
-    // }
-  }
 }

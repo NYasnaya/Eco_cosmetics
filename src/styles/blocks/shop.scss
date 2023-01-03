@@ -1,0 +1,150 @@
+.shop {
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+    gap: 16px;
+
+    @include onTablet {
+      justify-content: start;
+    }
+
+    @include onDesktop {
+      // display: grid;
+      grid-column: 2 / 6;
+    }
+
+    &-item {
+      padding: 10px 0 28px;
+
+      @include onDesktop {
+        padding: 20px 0 50px;
+      }
+    }
+
+    &-link {
+      box-sizing: border-box;
+      padding: 0 0 10px;
+      @extend %text2;
+      color: $secondTextColor;
+      border-bottom: 1px solid transparent;
+
+      text-decoration: none;
+
+      &:hover {
+        color: $mainColor;
+        border-color: $mainColor;
+      }
+    }
+
+    @include onDesktop {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__card-wrap {
+    margin-bottom: 30px;
+
+    @include onTablet {
+      margin-bottom: 50px;
+      height: auto;
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include onDesktop {
+      margin-bottom: 40px;
+      display: flex;
+      // grid-template-columns: repeat(12, 1fr);
+      // grid-column: 2 / 13;
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-start;
+
+    &:not(:first-child) {
+      display: none;
+    }
+
+    @include onTablet {
+      &:not(:first-child) {
+        display: flex;
+      }
+
+      &:nth-child(2n) {
+        display: none;
+      }
+    }
+
+    @include onDesktop {
+      display: flex;
+
+      &:not(:first-child) {
+        display: flex;
+      }
+
+      &:nth-child(2n) {
+        display: flex;
+      }
+    }
+
+    &-photo {
+      width: 118%;
+      height: 100%;
+      margin-bottom: 20px;
+
+      transform: translateX(-28px);
+
+      @include onTablet {
+        width: 100%;
+        transform: translateX(0);
+      }
+    }
+
+    &-image {
+      display: flex;
+      min-width: 100%;
+      height: 248px;
+      object-fit: cover;
+
+      @include onTablet {
+        width: 100%;
+        height: 300px;
+      }
+
+      @include onDesktop {
+        min-width: 380px;
+        height: 500px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      @extend %h5;
+      text-transform: uppercase;
+
+      @include onDesktop {
+        margin: 0;
+      }
+    }
+
+    &-price {
+      @extend %h5;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}

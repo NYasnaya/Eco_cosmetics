@@ -1,10 +1,14 @@
 .page {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir", sans-serif; /*???*/
   background-color: $backgroundColor;
   scroll-behavior: smooth;
 
   &__body {
     margin: 0;
+
+    &--with-menu {
+      overflow: hidden;
+    }
   }
 
   &__menu {
@@ -85,29 +89,19 @@
         letter-spacing: 0.05em;
         grid-column: 2 / 6;
       }
-    }
 
-    // &-text {
-    //   margin-bottom: 30px;
-    //   font-weight: 400;
-    //   font-size: 14px;
-    //   line-height: 150%;
+      &--mobile {
+        display: flex;
+        justify-content: center;
 
-    //   color: $mainColor;
+        @include onTablet {
+          justify-content: start;
+        }
 
-      // &--desktop {
-      //   display: none;
-
-      //   @include onDesktop {
-      //     display: block;
-      //     grid-column: 2 / 6;
-      //     font-weight: 400;
-      //     font-size: 14px;
-      //     line-height: 150%;
-
-      //     color: $mainColor;
-      //   }
-      // }
+        @include onDesktop {
+          justify-content: start;
+        }
+      }
     }
 
     &-wrap-link {
@@ -123,9 +117,9 @@
     }
 
     &-link {
-
       padding: 0 0 10px;
       margin: 0;
+      width: max-content;
       font-weight: 500;
       font-size: 14px;
       line-height: 130%;
@@ -133,8 +127,13 @@
 
       text-decoration: none;
       text-transform: uppercase;
-      border-bottom: 1px solid $acsentColor;
-      width: max-content;
+      border-bottom: 1px solid transparent;
+
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: $acsentColor;
+      }
 
       @include onTablet {
         grid-column: 1 / 4;
@@ -145,3 +144,4 @@
       }
     }
   }
+}

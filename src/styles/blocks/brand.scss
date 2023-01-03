@@ -16,26 +16,18 @@
     line-height: 150%;
     color: $mainColor;
 
-    // &:last-of-type {
-    //   display: none;
-    // }
-
-    &--desktop {
+    &:last-of-type {
       display: none;
+    }
 
-      @include onDesktop {
-        margin-bottom: 30px;
-        display: block;
-
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        color: $mainColor;
+    @include onDesktop {
+      &:last-of-type {
+        display: grid;
       }
     }
   }
 
-  &__wrap-image {
+  &__photo {
     @include onTablet {
       display: grid;
       grid-column: 4 / 7;
