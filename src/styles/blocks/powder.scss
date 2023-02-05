@@ -1,0 +1,111 @@
+.powder {
+  &__wrap-image {
+    margin-bottom: 31px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    flex-shrink: 0;
+
+    height: 100%;
+
+    @include onTablet {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @include onDesktop {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      // grid-column: 6 / 12;
+    }
+  }
+
+  &__image-text {
+    height: 322px;
+
+  }
+
+  &__image-jar {
+    width: 100%;
+    // height: 100%;
+    // grid-column: 9 / 12;
+  }
+
+  &__link {
+    margin-bottom: 100px;
+
+    @include onTablet {
+      margin-bottom: 141px;
+      position: relative;
+      top: -20px;
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      margin-bottom: 216px;
+      grid-column: 2 / 4;
+    }
+  }
+
+  &__icons {
+
+    @include onTablet {
+      display: flex;
+      justify-content: space-between;
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__wrap-icon {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onTablet {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @include onDesktop {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__bird-icon {
+    margin-bottom: 20px;
+    display: block;
+    width: 80px;
+    height: 60px;
+  }
+
+  &__recycled-icon {
+    margin-bottom: 20px;
+    display: block;
+    width: 100px;
+    height: 84px;
+  }
+
+  &__natural-icon {
+    margin-bottom: 20px;
+    display: block;
+    width: 80px;
+    height: 74px;
+  }
+
+  &__icons-text {
+    @extend%text2;
+    text-align: center;
+  }
+
+  // &__main-wrap {
+  //   grid-column: 1 / 13;
+  // }
+}

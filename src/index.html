@@ -112,7 +112,7 @@
     </nav>
 
     <main>
-      <section class="page__section foreword">
+      <section class=" foreword page__section">
         <div class="container">
           <div class="grid foreword__line-wrap">
             <div class="foreword__line"></div>
@@ -130,7 +130,7 @@
         </div>
       </section>
 
-      <section class="page__section brand" id="about-brand">
+      <section class="brand page__section" id="about-brand">
         <div class="container">
           <div class="page__section-wrap-vertical">
             <p class="page__section-vertical-text">
@@ -174,7 +174,7 @@
         </div>
       </section>
 
-      <section class="page__section" id="shop">
+      <section class="shop page__section" id="shop">
         <div class="container">
           <div class="page__section-wrap-vertical">
             <p class="page__section-vertical-text">
@@ -278,7 +278,7 @@
         </div>
       </section>
 
-      <section class="page__section" id="creators">
+      <section class="creators page__section" id="creators">
         <div class="container">
           <div class="page__section-wrap-vertical">
             <p class="page__section-vertical-text">
@@ -326,9 +326,8 @@
         </div>
       </section>
 
-      <section class="page__section">
+      <section class="powder page__section">
         <div class="container">
-
           <div class="page__section-wrap-vertical">
             <p class="page__section-vertical-text">
               ayurvedic tooth powder
@@ -336,12 +335,68 @@
           </div>
 
           <div class="grid">
+            <!-- <div class="powder__main-wrap"> -->
             <h4 class="page__section-title">
               ayurvedic tooth powder
             </h4>
 
-            <div class="page__section-wrap-image">
-              <div class="page__section-jar"></div>
+            <div class="powder__wrap-image grid__item--desktop-6-12">
+              <img
+              src="./images/icons/Jar-text.svg"
+              alt="Ayurvedic tooth powder"
+              class="powder__image-text"
+            >
+
+              <img
+              src="./images/icons/Jar.svg"
+              alt="Ayurvedic tooth powder"
+              class="powder__image-jar"
+            >
+            </div>
+
+            <div class="page__section-wrap-link powder__link">
+              <a href="#creators" class="page__section-link">
+              learn more
+              </a>
+            </div>
+            <!-- </div> -->
+
+            <div class="powder__icons grid__item--desktop-1-12">
+              <div class="powder__wrap-icon">
+                <img
+                  src="./images/icons/Bird.svg"
+                  alt="No synthetics and microplastics"
+                  class="powder__bird-icon"
+                >
+
+                <p class="powder__icons-text">
+                  No synthetics and microplastics
+                </p>
+              </div>
+
+              <div class="powder__wrap-icon">
+                <img
+                  src="./images/icons/Recycling.svg"
+                  alt="Product packaging can be recycled or reused"
+                  class="powder__recycled-icon"
+                >
+
+                <p class="powder__icons-text">
+                  Product packaging can be recycled or reused
+                </p>
+              </div>
+
+              <div class="powder__wrap-icon">
+                <img
+                  src="./images/icons/Leaves.svg"
+                  alt="Only natural ingredients"
+                  class="powder__natural-icon"
+                >
+
+                <p class="powder__icons-text">
+                  Only natural ingredients
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -355,9 +410,77 @@
 
       <section class="page__section" id="contact">
         <div class="container">
-          <h4 class="page__section-title">
-            contact us
-          </h4>
+          <div class="page__section-wrap-vertical">
+            <p class="page__section-vertical-text">
+              help
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="contact-us__content-wrap">
+              <h4 class="page__section-title">
+                contact us
+              </h4>
+
+              <p class="contact-us__text">
+                We will help you choose a product that suits you and answer your other questions
+              </p>
+
+              <form
+                id="contactForm"
+                autocomplete="off"
+              >
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="your name"
+                  class="contact-us__field form-field"
+                  minlength="3"
+                  required
+                >
+
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="e-mail"
+                  class="contact-us__field form-field"
+                  minlength="3"
+                  required
+                >
+
+                <input
+                  name="tel"
+                  type="tel"
+                  placeholder="phone number"
+                  class="contact-us__field form-field"
+                  pattern="+38[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
+                  minlength="10"
+                  required
+                >
+
+                <textarea
+                  name="message"
+                  placeholder="your message"
+                  class="
+                    contact-us__field
+                    form-field__textarea"
+                  id="message"
+                  required
+                ></textarea>
+              </form>
+
+              <a href="#products" class="button__link">
+                send a message
+              </a>
+            </div>
+
+            <!-- <div class="contact-us__wrap-image"> -->
+            <img
+              src="./images/photos/Contacts-Desktop-7.jpg"
+              alt="We will help you choose a product"
+              class="contact-us__image">
+            <!-- </div> -->
+          </div>
         </div>
       </section>
     </main>

@@ -1,0 +1,92 @@
+.form-field {
+  padding: 0 0 5px;
+  display: block;
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  border-bottom: 1px solid $lineColor;
+  background-color: $backgroundColor;
+  width: 100%;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+
+  transition: $transition;
+
+  @include onDesktop {
+    padding: 0 0 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &::placeholder {
+    text-transform: capitalize;
+    // color: $secondTextColor;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $mainColor;
+  }
+
+  &:valid:not(:placeholder-shown) {
+    color: $acsentColor;
+    border-bottom: 1px solid $acsentColor;
+  }
+
+  &:required:invalid:not(:placeholder-shown) {
+    border-bottom: 1px solid #eb5757;
+  }
+
+  &:required:invalid:not(:focus) {
+    color: #eb5757;
+  }
+
+  &__textarea {
+    padding: 0 0 5px;
+    position: relative;
+    resize: none;
+    display: flex;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid $lineColor;
+    // color: $secondTextColor;
+    outline: none;
+    width: 100%;
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include onDesktop {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    &::placeholder {
+      position: absolute;
+      bottom: 5px;
+
+      text-transform: capitalize;
+      color: $secondTextColor;
+
+      @include onDesktop {
+        bottom: 10px;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $mainColor;
+    }
+
+    &:valid:not(:placeholder-shown) {
+      color: $acsentColor;
+      border-bottom: 1px solid $acsentColor;
+    }
+  }
+}
